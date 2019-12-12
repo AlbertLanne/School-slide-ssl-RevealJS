@@ -117,21 +117,29 @@
 
         <section data-background="#3b5e74">
             <h2>Signer un document</h2>
-            <p> Openssl dgst –out "empreinte" "signature" </p>
+            <section data-markdown>
+                <script type="text/template">
+                    ```
+                    Openssl dgst –out "empreinte" "signature"
+                    ```
+                </script>
+            </section>
+
+
         </section>
 
         <section data-background="#244245">
             <h2>Requete de certificat</h2>
+            <section data-markdown>
+                <script type="text/template">
+                    ```
+                    Openssl req –config req.cnf –new clef –out maRequete
+                    ```
+                </script>
+            </section>
         </section>
 
-        <section data-markdown>
-            <script type="text/template">
-                ```
-                Openssl req –config req.cnf –new clef –out maRequete
-                ```
-            </script>
-        </section>
-        
+
         <section data-background="#3b1445">
             <h2>visualiser le contenu d’un certificat</h2>
 

@@ -194,6 +194,7 @@
         </section>
 
         <section data-background="#3b5e74">
+
             <h2>Signer un document</h2>
             <p> Openssl dgst –out
                 <empreinte>
@@ -203,7 +204,16 @@
 
         <section data-background="#244245">
             <h2>Requete de certificat</h2>
+
             <p>Openssl req –config req.cnf –new clef –out maRequete</p>
+            <pre class="fragment" data-fragment-index="1" style="text-align:center;">{
+                <span class="fragment" data-fragment-index="2">[</span>
+                <span class="fragment" data-fragment-index="3">K</span>
+                <span class="fragment" data-fragment-index="4"> in keyof T</span>
+                <span class="fragment" data-fragment-index="2">]:</span>
+                <span class="fragment" data-fragment-index="3">T[K]</span> }
+            </pre>
+
         </section>
 
         <section data-background="#3b1445">
@@ -216,6 +226,9 @@
             <h2>Verification du certificat obtenu</h2>
             <p>Openssl verify –Cafile CA-Cornu.crt moncertif.pem</p>
         </section>
+
+
+
 
 
     </div>

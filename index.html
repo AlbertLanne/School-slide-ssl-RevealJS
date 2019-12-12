@@ -73,9 +73,6 @@
         /*}*/
 
 
-
-
-
     </style>
 </head>
 <body>
@@ -91,21 +88,31 @@
 
         <section>
             <h1 class="var(--4-bg-color)">c koi ?</h1>
-        </section>
-
-        <!--Le seul prototype que j'ai vu pour ajouter du markdoiwn voir assets.md-->
-        <section data-markdown="assets.md">
 
         </section>
 
         <section data-background="#0f2139">
             <h2>Chiffrement symétrique</h2>
-            <p>openssl enc "options"</p>
+
+            <section data-markdown>
+                <script type="text/template">
+                    ```
+                    openssl enc "options"
+                    ```
+                </script>
+            </section>
         </section>
 
         <section data-background="#132c39">
             <h2>Génération d’une paire de clés</h2>
-            <p>Openssl genrsa –out "fichier" "taille" "options"</p>
+
+            <section data-markdown>
+                <script type="text/template">
+                    ```
+                    Openssl genrsa –out "fichier" "taille" "options"
+                    ```
+                </script>
+            </section>
         </section>
 
         <section data-background="#3b5e74">
@@ -115,41 +122,43 @@
 
         <section data-background="#244245">
             <h2>Requete de certificat</h2>
-
-            <p>Openssl req –config req.cnf –new clef –out maRequete</p>
-            <pre class="fragment" data-fragment-index="1" style="text-align:center;">{
-                <span class="fragment" data-fragment-index="2">[</span>
-                <span class="fragment" data-fragment-index="3">K</span>
-                <span class="fragment" data-fragment-index="4"> in keyof T</span>
-                <span class="fragment" data-fragment-index="2">]:</span>
-                <span class="fragment" data-fragment-index="3">T[K]</span> }
-            </pre>
-
         </section>
 
+        <section data-markdown>
+            <script type="text/template">
+                ```
+                Openssl req –config req.cnf –new clef –out maRequete
+                ```
+            </script>
+        </section>
+        
         <section data-background="#3b1445">
             <h2>visualiser le contenu d’un certificat</h2>
-            <p>Openssl x509 file.pem –text –noout</p>
 
-            <h2>Shrinking into action</h2>
-            <p class="fragment">
-                {a: &quot;<em>e漢}@🐱z&rsquo;a</em>&quot;, b: &quot;<em>eiiz</em>&quot;, c: &quot;<em>漢null&curren;</em>&quot;}
-                <span style="color:red;">&#10007;</span>
-            </p>
-            <p class="fragment">
-                {a: &quot;<em></em>&quot;, b: &quot;<em>eiiz</em>&quot;, c: &quot;<em>漢null&curren;</em>&quot;}
-                <span style="color:red;">&#10007;</span>
-            </p>
-            <p class="fragment">
-                {a: &quot;<em></em>&quot;, b: &quot;<em></em>&quot;, c: &quot;<em>漢null&curren;</em>&quot;}
-                <span style="color:green;">&#10003;</span>
-            </p>
+
+            <section data-markdown>
+                <script type="text/template">
+                    ```
+                    Openssl x509 file.pem –text –noout
+                    ```
+                </script>
+            </section>
+
+
         </section>
 
 
         <section data-background="#1f0045">
             <h2>Verification du certificat obtenu</h2>
-            <p>Openssl verify –Cafile CA-Cornu.crt moncertif.pem</p>
+
+
+            <section data-markdown>
+                <script type="text/template">
+                    ```
+                    Openssl verify –Cafile CA-Cornu.crt moncertif.pem
+                    ```
+                </script>
+            </section>
         </section>
 
 

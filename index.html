@@ -54,7 +54,10 @@
             text-decoration: none;
         }
 
-
+        /*
+        le site des themes
+        https://color.adobe.com/fr/search?q=programming
+        */
         element {
             --1-bg-color: #1D2E39;
             --2-bg-color: #FF2637;
@@ -63,92 +66,14 @@
             --5-bg-color: #FFAA84;
         }
 
+        /*comment utiliser les vars ? ⬇ */
+
         /*element {*/
         /*	background-color: var(--1-bg-color);*/
         /*}*/
 
 
-        /*.reveal blockquote, .reveal p.quote {*/
-        /*	margin: 0;*/
-        /*	text-align: justify;*/
-        /*	font-style: italic;*/
-        /*	margin-right: 1em;*/
-        /*	margin-top: 20px;*/
-        /*	margin-bottom: 20px;*/
-        /*	padding-left: 1em;*/
-        /*	font-size: 0.9em;*/
-        /*	border-left: 1px navajowhite solid;*/
-        /*}*/
-        /*.reveal blockquote::before, .reveal p.quote::before {*/
-        /*	content: '\201C';*/
-        /*	font-size: 2em;*/
-        /*	float: left;*/
-        /*	color: white;*/
-        /*	margin-left: -1em;*/
-        /*}*/
 
-        /*.reveal p.quote-right {*/
-        /*	margin: 0;*/
-        /*	text-align: right;*/
-        /*	font-style: italic;*/
-        /*	margin-left: 1em;*/
-        /*	margin-top: 20px;*/
-        /*	margin-bottom: 20px;*/
-        /*	padding-right: 1em;*/
-        /*	font-size: 0.9em;*/
-        /*	border-right: 1px navajowhite solid;*/
-        /*}*/
-        /*.reveal p.quote-right::after {*/
-        /*	content: '\201C';*/
-        /*	font-size: 2em;*/
-        /*	float: right;*/
-        /*	color: white;*/
-        /*	margin-right: -1em;*/
-        /*}*/
-
-        /*em {*/
-        /*	color: #f37723;*/
-        /*	font-style: normal;*/
-        /*	font-weight: normal;*/
-        /*}*/
-
-        /*li {*/
-        /*	color: #d3d3d3;*/
-        /*}*/
-
-        /*li.active, .left-menu > li:last-child, .left-menu > li:last-child > ul > li:last-child {*/
-        /*	color: #f37723;*/
-        /*}*/
-
-        /*.reveal ol {*/
-        /*	counter-reset: step-counter;*/
-        /*	list-style-type: none;*/
-        /*	margin: 0;*/
-        /*	padding: 0;*/
-        /*	width: 100%;*/
-        /*	text-align: center;*/
-        /*}*/
-
-        /*.reveal ol li {*/
-        /*	counter-increment: step-counter;*/
-        /*	margin-top: 10px;*/
-        /*	margin-bottom: 10px;*/
-        /*}*/
-
-        /*.reveal ol li:before {*/
-        /*	content: counter(step-counter, upper-roman);*/
-        /*	color: #f37723;*/
-        /*	float: left;*/
-        /*}*/
-
-        /*.reveal .vsmallnote {*/
-        /*	font-style: italic;*/
-        /*	font-size: 0.5em;*/
-        /*	color: #782e00;*/
-        /*}*/
-
-
-        /*comment utiliser les vars ?*/
 
 
     </style>
@@ -159,47 +84,33 @@
 
 
         <section data-background="#1D2E39">
-            <h1>OpenSSL
-                <h1>
-
-                    <h3>lol</h3>
-                    <p>test</p>
+            <h1>OpenSSL </h1>
+            <h3>De théorie à pratique</h3>
+            <p>Gabriel Langlois est Albert Lanne</p>
         </section>
-
 
         <section>
-            <h1 class="var(--4-bg-color)">c koi ?<h1>
+            <h1 class="var(--4-bg-color)">c koi ?</h1>
         </section>
 
-
+        <!--Le seul prototype que j'ai vu pour ajouter du markdoiwn voir assets.md-->
         <section data-markdown="assets.md">
-
 
         </section>
 
         <section data-background="#0f2139">
             <h2>Chiffrement symétrique</h2>
-            <p>openssl enc
-                <options>
-            </p>
+            <p>openssl enc "options"</p>
         </section>
 
         <section data-background="#132c39">
             <h2>Génération d’une paire de clés</h2>
-            <p>Openssl genrsa –out
-                <fichier>
-                    <taille>
-                        <options>
-            </p>
+            <p>Openssl genrsa –out "fichier" "taille" "options"</p>
         </section>
 
         <section data-background="#3b5e74">
-
             <h2>Signer un document</h2>
-            <p> Openssl dgst –out
-                <empreinte>
-                    <signature>
-            </p>
+            <p> Openssl dgst –out "empreinte" "signature" </p>
         </section>
 
         <section data-background="#244245">
@@ -219,6 +130,20 @@
         <section data-background="#3b1445">
             <h2>visualiser le contenu d’un certificat</h2>
             <p>Openssl x509 file.pem –text –noout</p>
+
+            <h2>Shrinking into action</h2>
+            <p class="fragment">
+                {a: &quot;<em>e漢}@🐱z&rsquo;a</em>&quot;, b: &quot;<em>eiiz</em>&quot;, c: &quot;<em>漢null&curren;</em>&quot;}
+                <span style="color:red;">&#10007;</span>
+            </p>
+            <p class="fragment">
+                {a: &quot;<em></em>&quot;, b: &quot;<em>eiiz</em>&quot;, c: &quot;<em>漢null&curren;</em>&quot;}
+                <span style="color:red;">&#10007;</span>
+            </p>
+            <p class="fragment">
+                {a: &quot;<em></em>&quot;, b: &quot;<em></em>&quot;, c: &quot;<em>漢null&curren;</em>&quot;}
+                <span style="color:green;">&#10003;</span>
+            </p>
         </section>
 
 
@@ -226,9 +151,6 @@
             <h2>Verification du certificat obtenu</h2>
             <p>Openssl verify –Cafile CA-Cornu.crt moncertif.pem</p>
         </section>
-
-
-
 
 
     </div>
@@ -241,6 +163,18 @@
     // - https://github.com/hakimel/reveal.js#configuration
     // - https://github.com/hakimel/reveal.js#dependencies
     Reveal.initialize({
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Set default timing of 2 minutes per slide
+        defaultTiming: 120,
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
         dependencies: [
             {src: 'plugin/markdown/marked.js'},
             {src: 'plugin/markdown/markdown.js'},

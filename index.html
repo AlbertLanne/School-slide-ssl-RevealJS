@@ -36,7 +36,10 @@
 
         .reveal p, .more {
             color: #FFAA84;
-            ee: #1f0045
+        }
+
+        .reveal span, .more {
+            color: #ff0099;
         }
 
         .reveal a, h3 {
@@ -83,8 +86,9 @@
         <section data-background="#1D2E39">
             <h1>OpenSSL </h1>
             <h3>De théorie à pratique</h3>
-            <p>Gabriel Langlois est Albert Lanne</p>
+            <p><span>Gabriel Langlois</span> est <span>Albert Lanne</span></p>
         </section>
+
 
         <section>
             <h1 class="var(--4-bg-color)">c koi ?</h1>
@@ -128,46 +132,46 @@
 
         </section>
 
-        <section data-background="#244245">
-            <h2>Requete de certificat</h2>
-            <section data-markdown>
-                <script type="text/template">
-                    ```
-                    Openssl req –config req.cnf –new clef –out maRequete
-                    ```
-                </script>
-            </section>
-        </section>
-
-
-        <section data-background="#3b1445">
-            <h2>visualiser le contenu d’un certificat</h2>
-
-
-            <section data-markdown>
-                <script type="text/template">
-                    ```
-                    Openssl x509 file.pem –text –noout
-                    ```
-                </script>
+        <section>
+            <section data-background="#244245">
+                <h2>Requete de certificat</h2>
+                <section data-markdown>
+                    <script type="text/template">
+                        ```
+                        Openssl req –config req.cnf –new clef –out maRequete
+                        ```
+                    </script>
+                </section>
             </section>
 
 
-        </section>
-
-
-        <section data-background="#1f0045">
-            <h2>Verification du certificat obtenu</h2>
-
-
-            <section data-markdown>
-                <script type="text/template">
-                    ```
-                    Openssl verify –Cafile CA-Cornu.crt moncertif.pem
-                    ```
-                </script>
+            <section data-background="#3b1445">
+                <h2>visualiser le contenu d’un certificat</h2>
+                <section data-markdown>
+                    <script type="text/template">
+                        ```
+                        Openssl x509 file.pem –text –noout
+                        ```
+                    </script>
+                </section>
             </section>
+
+            <section data-background="#244245">
+                <h2>Verification du certificat obtenu</h2>
+
+                <section data-markdown>
+                    <script type="text/template">
+                        ```
+                        Openssl verify –Cafile CA-Cornu.crt moncertif.pem
+                        ```
+                    </script>
+                </section>
+            </section>
+
+
+
         </section>
+
 
 
     </div>

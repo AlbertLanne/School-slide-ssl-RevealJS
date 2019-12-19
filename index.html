@@ -130,7 +130,7 @@
                     -----
                     Header | Header | Header
                     -------|--------|-------
-                    Cell   | Cell   | Cell
+                    RSA   | Cell   | Cell
                     Cell   | Cell   | Cell
                     -----
 
@@ -152,18 +152,17 @@
             </section>
 
 
-        </section>
-           <!-- ===================================================================== ALBERT-->
+        </section> <!-- ===================================================================== ALBERT-->
 
         <section data-markdown>
             <script type="text/template" class="align column">
-                ---
                 *Creation d'une requête  de certificat*
+                ---
                 ----
                 Ce que contient un certificat
 
                 - Pays (C),  Etat ou province (ST),  Ville ou localité (L)<!-- .element: class="fragment" data-fragment-index="1" -->
-                - Organisation (O),  Nom (CN),  Email<!-- .element: class="fragment" data-fragment-index="2" -->
+                Organisation (O),  Nom (CN),  Email<!-- .element: class="fragment" data-fragment-index="2" -->
 
                 ---
 
@@ -185,57 +184,110 @@
             </script>
         </section>
 
-        <section data-markdown>
-            <script type="text/template" class="align column">
-                ---
-                *Consulter les informations de la requête*
-                ---
+        <!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
-                ----
+        <section data-background="#3e4c4e">
+            <div class=" flex align-baseline inline-block">
 
-
-
-                ```
-                Openssl req –config req.cnf -in maRequete.pem -text -noout
-                ```
-            </script>
-
+                <img class="fragment justify-start" src="assets/OPENSSL_CONSOL.png" height="auto" width="1000">
+                <img class="fragment" src="assets/ma_clef.PNG" height="auto" width="800">
+            </div>
         </section>
 
-            <section data-background="#3b1445">
-                <p>Certificate Request:
-                    Data:
-                        Version: 0 (0x0)
-                        Subject: C=fr
-                </p>
-                <h2></h2>
-                <section data-markdown>
-                    <script type="text/template">
-                        ```
-                        Openssl x509 file.pem –text –noout
-                        ```
-                    </script>
-                </section>
+        <!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+        <section data-markdown>
+            <script type="text/template" class="align column flex-auto flex">
+                > Consulter les informations de la requête
+                ---
+                ```
+                $ C:\Users\Albert\Desktop\ssl>openssl req -config req.cnf -in
+                maRequete.pem -text -noout
+                $ Certificate Request:
+                $ Data:
+                $ Version: 1 (0x0)
+                $ Subject: C = FR, ST = Calvados, L = Lisieux (14), O = lyc\C3\A9e
+                Cornu, OU = SNIR, CN = LANNE Albert, emailAddress = test@gmail.com
+                $ Public Key Algorithm: rsaEncryption
+                $ RSA Public-Key: (1024 bit)
+                $ Modulus:
+                $ 00:db:2b:3f:4e:35:38:a6:95:2b:cd:19:41:5b:e3:
+                $ 4e:19:1a:c1:ac:da:d6:0a:07:52:3f:47:c0:82:57:
+                ```
+                ---
+            </script>
+        </section>
+
+        <!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+
+
+        <section data-markdown>
+            <script type="text/template" class="align column flex-auto flex">
+                > Consulter les informations du certificat
+                ---
+                ```
+              $ C:\Users\Albert\Desktop\ssl>Openssl x509 -in CA-Cornu.crt -text -noout
+              $ Certificate:
+              $ Data:
+              $ Version: 3 (0x2)
+              $ Serial Number:
+              $ c2:33:84:a4:5e:76:34:38
+              $ Signature Algorithm: md5WithRSAEncryption
+              $ Issuer: C = FR, ST = Calvados, L = Lisieux, O = lyc\C3\A9e Cornu, OU = sts iris, CN = CA-CORNU
+              $ Validity
+              $ Not Before: Aug 28 08:08:04 2006 GMT
+              $ Not After : Aug 25 08:08:04 2016 GMT
+              $ Subject: C = FR, ST = Calvados, L = Lisieux, O = lyc\C3\A9e Cornu, OU = sts iris, CN = CA-CORNU
+              $ Subject Public Key Info:
+              $ Public Key Algorithm: rsaEncryption
+              $ RSA Public-Key: (1024 bit)
+              $ Modulus:
+              $ 00:9f:90:f1:af:33:42:8c:d9:30:68:78:7f:1a:8c:
+              $ 0c:9f:c4:b3:86:64:51:0b:0c:7f:74:1c:81:30:9a:
+                ```
+                ---
+            </script>
+        </section>
+
+
+        <!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+
+        <section data-background="#3b1445">
+
+            <h2></h2>
+            <section data-markdown>
+                <script type="text/template">
+                    ```
+                    Openssl x509 file.pem –text –noout
+                    ```
+                </script>
+            </section>
+        </section>
+
+        <section data-background="#244245">
+            <h2>Verification du certificat obtenu</h2>
+
+            <section data-markdown>
+                <script type="text/template">
+                    ```
+                    Openssl verify –Cafile CA-Cornu.crt moncertif.pem
+                    ```
+                </script>
             </section>
 
-            <section data-background="#244245">
-                <h2>Verification du certificat obtenu</h2>
-
-                <section data-markdown>
-                    <script type="text/template">
-                        ```
-                        Openssl verify –Cafile CA-Cornu.crt moncertif.pem
-                        ```
-                    </script>
-                </section>
-
-                <!-- ===================================================================== ALBERT-->
+            <!-- ===================================================================== ALBERT-->
 
 
 
 
         </section>
-
+		<section>
+		<h1>Sécurité<h2>
+		<img src="assets/Explication_de_la_faille_Heartbleed.svg" height="550" back>
+		</section>
+		
 
 
     </div>

@@ -84,29 +84,17 @@
     <div class="slides">
 
 
-
-
-        <section>
-            <h2>Are we sure to cover everything?</h2>
-            <h3 class="fragment">Yes, all my users are happy</h3>
-            <h3 class="fragment">Yes, I have 100% coverage</h3>
-        </section>
-
-
-
-
         <section data-background="#1D2E39">
             <h1>OpenSSL </h1>
             <h3>De la théorie à la pratique</h3>
             <p><span>Gabriel Langlois</span> et <span>Albert Lanne</span></p>
         </section>
 
-
         <section>
             <h1 class="var(--4-bg-color)">Qu'est-ce que c'est?</h1>
             <img src="assets/openssl.png"  height="400" back >
         </section>
-        
+
         <section>
             <h1>OpenSSL</h1>
             <img src="assets/lib.png" height="auto" back>
@@ -155,12 +143,6 @@
         </section>
            <!-- ===================================================================== ALBERT-->
 
-        <!--        <section data-markdown>-->
-        <!--            <script type="text/template">-->
-        <!--                - Item 2 &lt;!&ndash; .element: class="fragment" data-fragment-index="1" &ndash;&gt;-->
-        <!--                - Item 1 &lt;!&ndash; .element: class="fragment" data-fragment-index="2" &ndash;&gt;-->
-        <!--            </script>-->
-        <!--        </section>-->
         <section data-markdown>
             <script type="text/template" class="align column">
                 ---
@@ -168,8 +150,8 @@
                 ----
                 Ce que contient un certificat
 
-                - Pays (C),  Etat ou province (ST),  Ville ou localité (L)
-                - Organisation (O),  Nom (CN),  Email
+                - Pays (C),  Etat ou province (ST),  Ville ou localité (L)<!-- .element: class="fragment" data-fragment-index="1" -->
+                - Organisation (O),  Nom (CN),  Email<!-- .element: class="fragment" data-fragment-index="2" -->
 
                 ---
 
@@ -180,6 +162,10 @@
             </script>
 
             <script type="text/template" class="fragment">
+                ---
+                *Afficher les informations contenues dans la requetes*
+                ----
+
                 ```
                 Openssl req –config req.cnf –new clef –out maRequete
 
@@ -187,34 +173,13 @@
             </script>
         </section>
 
-
-
-
-
-
-
-
         <section data-markdown>
             <script type="text/template" class="align column">
                 ---
-                *Creation d'une requête  de certificat*
-                ----
-                Ce que contient un certificat
-
-                - Pays (C),  Etat ou province (ST),  Ville ou localité (L)
-                - Organisation (O),  Nom (CN),  Email
-
-                ---
-
-                ```
-                Openssl req –config req.cnf –new clef –out maRequete
-
-                ```
-
-
-
                 *Consulter les informations de la requête*
-
+                ---
+                -eeeee
+                ----
 
 
 

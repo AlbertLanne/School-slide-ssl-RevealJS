@@ -104,8 +104,13 @@
 
         <section>
             <h1 class="var(--4-bg-color)">Qu'est-ce que c'est?</h1>
-            <img src="assets/openssl.png"  height="200" back >
+            <img src="assets/openssl.png"  height="400" back >
         </section>
+        
+        <section>
+            <h1>OpenSSL</h1>
+            <img src="assets/lib.png" height="auto" back>
+        <section>
 
         <section data-background="#0f2139">
             <h2>Chiffrement symétrique</h2>
@@ -148,107 +153,43 @@
 
 
         </section>
-        <!-- ===================================================================== ALBERT-->
-
-        <!--        <section data-markdown>-->
-        <!--            <script type="text/template">-->
-        <!--                - Item 2 &lt;!&ndash; .element: class="fragment" data-fragment-index="1" &ndash;&gt;-->
-        <!--                - Item 1 &lt;!&ndash; .element: class="fragment" data-fragment-index="2" &ndash;&gt;-->
-        <!--            </script>-->
-        <!--        </section>-->
-        <section data-markdown>
-            <script type="text/template" class="align column">
-                ---
-                *Creation d'une requête  de certificat*
-                ----
-                Ce que contient un certificat
-
-                - Pays (C),  Etat ou province (ST),  Ville ou localité (L)
-                - Organisation (O),  Nom (CN),  Email
-
-                ---
-
-                ```
-                Openssl req –config req.cnf –new clef –out maRequete
-
-                ```
-            </script>
-
-            <script type="text/template" class="fragment">
-                ```
-                Openssl req –config req.cnf –new clef –out maRequete
-
-                ```
-            </script>
-        </section>
-
-
-
-
-
-
-
-
-        <section data-markdown>
-            <script type="text/template" class="align column">
-                ---
-                *Creation d'une requête  de certificat*
-                ----
-                Ce que contient un certificat
-
-                - Pays (C),  Etat ou province (ST),  Ville ou localité (L)
-                - Organisation (O),  Nom (CN),  Email
-
-                ---
-
-                ```
-                Openssl req –config req.cnf –new clef –out maRequete
-
-                ```
-
-
-
-                *Consulter les informations de la requête*
-
-
-
-
-                ```
-                Openssl req –config req.cnf –new clef –out maRequete
-
-                ```
-            </script>
-
-            <script type="text/template" class="fragment">
-                ```
-                Openssl req –config req.cnf -in maRequete.pem -text -noout
-                ```
-            </script>
-        </section>
-
-        <section data-background="#3b1445">
-            <h2>visualiser le contenu d’un certificat</h2>
-            <section data-markdown>
-                <script type="text/template">
-                    ```
-                    Openssl x509 file.pem –text –noout
-                    ```
-                </script>
-            </section>
-        </section>
-
-        <section data-background="#244245">
-            <h2>Verification du certificat obtenu</h2>
-
-            <section data-markdown>
-                <script type="text/template">
-                    ```
-                    Openssl verify –Cafile CA-Cornu.crt moncertif.pem
-                    ```
-                </script>
+<!-- ===================================================================== ALBERT-->
+        <section>
+            <section data-background="#244245">
+                <h2>Requete de certificat</h2>
+                <section data-markdown>
+                    <script type="text/template">
+                        ```
+                        Openssl req –config req.cnf –new clef –out maRequete
+                        ```
+                    </script>
+                </section>
             </section>
 
-            <!-- ===================================================================== ALBERT-->
+
+            <section data-background="#3b1445">
+                <h2>visualiser le contenu d’un certificat</h2>
+                <section data-markdown>
+                    <script type="text/template">
+                        ```
+                        Openssl x509 file.pem –text –noout
+                        ```
+                    </script>
+                </section>
+            </section>
+
+            <section data-background="#244245">
+                <h2>Verification du certificat obtenu</h2>
+
+                <section data-markdown>
+                    <script type="text/template">
+                        ```
+                        Openssl verify –Cafile CA-Cornu.crt moncertif.pem
+                        ```
+                    </script>
+                </section>
+            </section>
+<!-- ===================================================================== ALBERT-->
 
 
 

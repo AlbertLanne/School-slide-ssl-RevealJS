@@ -42,7 +42,6 @@
             color: #ff0099;
 
 
-
         }
 
         .reveal a, h3 {
@@ -73,7 +72,13 @@
             --4-bg-color: #FF8667;
             --5-bg-color: #FFAA84;
         }
-        .reveal section img { background:none; border:none; box-shadow:none; }
+
+        .reveal section img {
+            background: none;
+            border: none;
+            box-shadow: none;
+        }
+
         /*comment utiliser les vars ? ⬇ */
 
         /*element {*/
@@ -96,7 +101,7 @@
 
         <section data-background="#3e4c4e">
             <h1 class="var(--4-bg-color)">Qu'est-ce que c'est?</h1>
-            <img src="assets/openssl.png"  height="400" back >
+            <img src="assets/openssl.png" height="400" back>
         </section>
 
         <section data-background="#343452">
@@ -105,19 +110,19 @@
 
         <section data-background="#73744c">
             <h2>Chiffrement symétrique</h2>
-            <img src="assets/gab_synchrone.png"  height="auto" back  >
+            <img src="assets/gab_synchrone.png" height="auto" back>
 
             <video>
-                <source data-src="assets/video.webm" type="video/webm" />
+                <source data-src="assets/video.webm" type="video/webm"/>
 
             </video>
-<!--            <section data-markdown>-->
-<!--                <script type="text/template">-->
-<!--                    ```-->
-<!--                    openssl enc "options"-->
-<!--                    ```-->
-<!--                </script>-->
-<!--            </section>-->
+            <!--            <section data-markdown>-->
+            <!--                <script type="text/template">-->
+            <!--                    ```-->
+            <!--                    openssl enc "options"-->
+            <!--                    ```-->
+            <!--                </script>-->
+            <!--            </section>-->
         </section>
 
         <section data-background="#497449">
@@ -151,8 +156,9 @@
                 </script>
             </section>
 
+        </section>
 
-        </section> <!-- ===================================================================== ALBERT-->
+        <!-- ===================================================================== ALBERT-->
 
         <section data-markdown>
             <script type="text/template" class="align column">
@@ -162,7 +168,7 @@
                 Ce que contient un certificat
 
                 - Pays (C),  Etat ou province (ST),  Ville ou localité (L)<!-- .element: class="fragment" data-fragment-index="1" -->
-                Organisation (O),  Nom (CN),  Email<!-- .element: class="fragment" data-fragment-index="2" -->
+                - Organisation (O),  Nom (CN),  Email<!-- .element: class="fragment" data-fragment-index="2" -->
 
                 ---
 
@@ -221,30 +227,29 @@
         <!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
 
-
         <section data-markdown>
             <script type="text/template" class="align column flex-auto flex">
                 > Consulter les informations du certificat
                 ---
                 ```
-              $ C:\Users\Albert\Desktop\ssl>Openssl x509 -in CA-Cornu.crt -text -noout
-              $ Certificate:
-              $ Data:
-              $ Version: 3 (0x2)
-              $ Serial Number:
-              $ c2:33:84:a4:5e:76:34:38
-              $ Signature Algorithm: md5WithRSAEncryption
-              $ Issuer: C = FR, ST = Calvados, L = Lisieux, O = lyc\C3\A9e Cornu, OU = sts iris, CN = CA-CORNU
-              $ Validity
-              $ Not Before: Aug 28 08:08:04 2006 GMT
-              $ Not After : Aug 25 08:08:04 2016 GMT
-              $ Subject: C = FR, ST = Calvados, L = Lisieux, O = lyc\C3\A9e Cornu, OU = sts iris, CN = CA-CORNU
-              $ Subject Public Key Info:
-              $ Public Key Algorithm: rsaEncryption
-              $ RSA Public-Key: (1024 bit)
-              $ Modulus:
-              $ 00:9f:90:f1:af:33:42:8c:d9:30:68:78:7f:1a:8c:
-              $ 0c:9f:c4:b3:86:64:51:0b:0c:7f:74:1c:81:30:9a:
+                $ C:\Users\Albert\Desktop\ssl>Openssl x509 -in CA-Cornu.crt -text -noout
+                $ Certificate:
+                $ Data:
+                $ Version: 3 (0x2)
+                $ Serial Number:
+                $ c2:33:84:a4:5e:76:34:38
+                $ Signature Algorithm: md5WithRSAEncryption
+                $ Issuer: C = FR, ST = Calvados, L = Lisieux, O = lyc\C3\A9e Cornu, OU = sts iris, CN = CA-CORNU
+                $ Validity
+                $ Not Before: Aug 28 08:08:04 2006 GMT
+                $ Not After : Aug 25 08:08:04 2016 GMT
+                $ Subject: C = FR, ST = Calvados, L = Lisieux, O = lyc\C3\A9e Cornu, OU = sts iris, CN = CA-CORNU
+                $ Subject Public Key Info:
+                $ Public Key Algorithm: rsaEncryption
+                $ RSA Public-Key: (1024 bit)
+                $ Modulus:
+                $ 00:9f:90:f1:af:33:42:8c:d9:30:68:78:7f:1a:8c:
+                $ 0c:9f:c4:b3:86:64:51:0b:0c:7f:74:1c:81:30:9a:
                 ```
                 ---
             </script>
@@ -253,41 +258,29 @@
 
         <!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
-
-        <section data-background="#3b1445">
-
-            <h2></h2>
-            <section data-markdown>
-                <script type="text/template">
-                    ```
-                    Openssl x509 file.pem –text –noout
-                    ```
-                </script>
-            </section>
+        <section data-background="#251a28">
+            <h2> Exemple d'un certificat d'autorité</h2>
+            <div class=" flex align-baseline inline-block">
+                <img class="fragment justify-start" src="assets/certification_truc.JPG" height="auto" width="3000">
+            </div>
+            <p class="fragment"> Openssl verify –Cafile CA-Cornu.crt moncertif.pem</p>
         </section>
+        <!--                ----------------------------------------------------------------------->
 
-        <section data-background="#244245">
-            <h2>Verification du certificat obtenu</h2>
+        <section data-background="#0d4807">
+            <div class="flex flex-wrap">
 
-            <section data-markdown>
-                <script type="text/template">
-                    ```
-                    Openssl verify –Cafile CA-Cornu.crt moncertif.pem
-                    ```
-                </script>
-            </section>
-
+                <h2>                <i> Pour allez plus loin...</i></h2>
+                <img class="fragment justify-start" src="assets/le-logo-twitter-noalpha.png" height="auto" width="250">
+            </div>
             <!-- ===================================================================== ALBERT-->
 
 
-
-
         </section>
-		<section>
-		<h1>Sécurité<h2>
-		<img src="assets/Explication_de_la_faille_Heartbleed.svg" height="550" back>
-		</section>
-		
+        <section>
+            <h1>Sécurité<h2>
+                <img src="assets/Explication_de_la_faille_Heartbleed.svg" height="550" back>
+        </section>
 
 
     </div>
@@ -322,3 +315,17 @@
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

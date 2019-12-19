@@ -40,6 +40,9 @@
 
         .reveal span, .more {
             color: #ff0099;
+
+
+
         }
 
         .reveal a, h3 {
@@ -50,6 +53,7 @@
         .reveal a:hover, h2 {
             color: #FF4E4A !important;
             FF4E4A: none;
+
         }
 
         .reveal a:hover, h1 {
@@ -90,16 +94,16 @@
             <p><span>Gabriel Langlois</span> et <span>Albert Lanne</span></p>
         </section>
 
-        <section>
+        <section data-background="#3e4c4e">
             <h1 class="var(--4-bg-color)">Qu'est-ce que c'est?</h1>
             <img src="assets/openssl.png"  height="400" back >
         </section>
 
-        <section>
+        <section data-background="#343452">
             <img src="assets/lib.png" height="auto" back>
         </section>
 
-        <section data-background="#0f2139">
+        <section data-background="#73744c">
             <h2>Chiffrement symétrique</h2>
             <img src="assets/gab_synchrone.png"  height="auto" back  >
 
@@ -116,11 +120,20 @@
 <!--            </section>-->
         </section>
 
-        <section data-background="#132c39">
-            <h2>Génération d’une paire de clés</h2>
+        <section data-background="#497449">
+            <h2>LEs clés</h2>
 
             <section data-markdown>
                 <script type="text/template">
+                    -----
+                    *les types de clef avec un tableau*
+                    -----
+                    Header | Header | Header
+                    -------|--------|-------
+                    Cell   | Cell   | Cell
+                    Cell   | Cell   | Cell
+                    -----
+
                     ```
                     Openssl genrsa –out "fichier" "taille" "options"
                     ```
@@ -183,16 +196,10 @@
 
 
                 ```
-                Openssl req –config req.cnf –new clef –out maRequete
-
-                ```
-            </script>
-
-            <script type="text/template" class="fragment">
-                ```
                 Openssl req –config req.cnf -in maRequete.pem -text -noout
                 ```
             </script>
+
         </section>
 
             <section data-background="#3b1445">

@@ -209,27 +209,6 @@
 
         <!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
-        <section data-markdown>
-            <script type="text/template" class="align column flex-auto flex">
-                > Consulter les informations de la requête
-                ---
-                ```
-                $ C:\Users\Albert\Desktop\ssl>openssl req -config req.cnf -in
-                maRequete.pem -text -noout
-                $ Certificate Request:
-                $ Data:
-                $ Version: 1 (0x0)
-                $ Subject: C = FR, ST = Calvados, L = Lisieux (14), O = lyc\C3\A9e
-                Cornu, OU = SNIR, CN = LANNE Albert, emailAddress = test@gmail.com
-                $ Public Key Algorithm: rsaEncryption
-                $ RSA Public-Key: (1024 bit)
-                $ Modulus:
-                $ 00:db:2b:3f:4e:35:38:a6:95:2b:cd:19:41:5b:e3:
-                $ 4e:19:1a:c1:ac:da:d6:0a:07:52:3f:47:c0:82:57:
-                ```
-                ---
-            </script>
-        </section>
 
         <!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
@@ -274,6 +253,33 @@
         </section>
         <!--                ----------------------------------------------------------------------->
 
+        <section data-markdown>
+            <script type="text/template" class="align column">
+                *Création d'un certificat*
+                ---
+                ----
+                Pour crée et signer un certificat à partir de la requête maRequete
+                ```shell
+                $ Openssl x509 -days 10 -CAserial cornu.srl -CA
+                $ <certif de l'autorité> -CAkey <cle de l'autorité>
+                $  -in maRequete.pem -req -out monCertif.pem
+                ```
+            </script>
+
+            <script type="text/template" class="fragment">
+                ---
+                *Afficher les informations contenues dans la requetes*
+                ----
+
+                ```
+                Openssl req –config req.cnf –new clef –out maRequete
+
+                ```
+            </script>
+        </section>
+
+
+
         <section data-background="#0d4807">
             <div class="flex flex-wrap">
 
@@ -292,7 +298,6 @@
             <h1>Les forks<h2>
 				<img src="assets/fork.png" height="650" back>
         </section>
-
 
     </div>
 </div>

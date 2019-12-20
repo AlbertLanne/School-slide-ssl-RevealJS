@@ -253,9 +253,8 @@
                 Pour crée et signer un certificat à partir de la requête maRequete
                 ```shell
                 $ Openssl x509 -days 10 -CAserial cornu.srl -CA
-                $
-                <certif de l'autorité> -CAkey
-                <cle de l'autorité>
+                $ <certif de l'autorité> -CAkey
+                $ <cle de l'autorité>
                 $  -in maRequete.pem -req -out monCertif.pem
                 ```
                 Vérification du certificat obtenu

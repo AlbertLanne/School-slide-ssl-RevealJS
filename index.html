@@ -124,13 +124,13 @@
             <!--                </script>-->
             <!--            </section>-->
         </section>
-		<section data-background="#3e4c4e">
-			<h1>Chiffrement asymétrique</h1>
-			<img src="assets/asym.PNG" height="400" back>
-		</section>
+        <section data-background="#3e4c4e">
+            <h1>Chiffrement asymétrique</h1>
+            <img src="assets/asym.PNG" height="400" back>
+        </section>
 
         <section data-background="#497449">
-<!--            <h2>Les clés</h2>-->
+            <!--            <h2>Les clés</h2>-->
 
             <section data-markdown>
                 <script type="text/template">
@@ -141,9 +141,8 @@
                     -------|--------
                     RSA   | 1977
                     DSA   | 1993
-					Diffie-Hellman  | 1976
-					courbe elliptique   | 1985
-                    -----
+                    Diffie-Hellman  | 1976
+                    courbe elliptique   | 1985
 
                     ```
                     Openssl genrsa –out "fichier" "taille" "options"
@@ -151,20 +150,13 @@
                 </script>
             </section>
         </section>
-
         <section data-background="#3b5e74">
-            <h2>Signer un document</h2>
-            <section data-markdown>
-				<img src="assets/signature.PNG" height="auto" back>
-                <script type="text/template">
-                    ```
-                    Openssl dgst –out "empreinte" "signature"
-                    ```
-                </script>
-            </section>
-
+            <div class="flex flex-wrap">
+                <h2>Signer un document</h2>
+                <img src="assets/signature.PNG" height="auto" width="600" back>
+                <p> Openssl dgst –out "empreinte" "signature"</p>
+            </div>
         </section>
-
         <!-- ===================================================================== ALBERT-->
 
         <section data-markdown>
@@ -261,8 +253,14 @@
                 Pour crée et signer un certificat à partir de la requête maRequete
                 ```shell
                 $ Openssl x509 -days 10 -CAserial cornu.srl -CA
-                $ <certif de l'autorité> -CAkey <cle de l'autorité>
+                $
+                <certif de l'autorité> -CAkey
+                <cle de l'autorité>
                 $  -in maRequete.pem -req -out monCertif.pem
+                ```
+                Vérification du certificat obtenu
+                ```shell
+                $ Openssl verify -CAfile CA-Cornu.crt monCertif.pem
                 ```
             </script>
 
@@ -279,11 +277,10 @@
         </section>
 
 
-
         <section data-background="#0d4807">
             <div class="flex flex-wrap">
 
-                <h2>                <i> Pour allez plus loin...</i></h2>
+                <h2><i> Pour allez plus loin...</i></h2>
                 <img class="fragment justify-start" src="assets/le-logo-twitter-noalpha.png" height="auto" width="250">
             </div>
             <!-- ===================================================================== ALBERT-->
@@ -294,9 +291,9 @@
             <h1>Sécurité<h2>
                 <img src="assets/Explication_de_la_faille_Heartbleed.svg" height="550" back>
         </section>
-		<section data-background="#3e4c4e">
+        <section data-background="#3e4c4e">
             <h1>Les forks<h2>
-				<img src="assets/fork.png" height="650" back>
+                <img src="assets/fork.png" height="650" back>
         </section>
 
     </div>
